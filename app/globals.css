@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --text-secondary: #a3a3a3;
+    --text-hover: #ffffff;
+    --title-color: #ffffff;
+    --subtitle-color: #cccccc;
+
+    --header-bg: #121212;
+    --footer-bg: #0f0f0f;
+    --border-color: #262626;
+
+    --danger: #e5484d;
+    --danger-hover: #c9302c;
+    --accent: #a5a6f6;
+    --accent-hover: #c3c4ff;
+    --input-bg: #1c1c1c;
+    --input-border: #333333;
+    --input-text: #ededed;
+
+    --disabled-bg: #3a3a3a;
+
+    --cancel-bg: #1e1e1e;
+    --cancel-bg-hover: #2a2a2a;
+    --cancel-text: #ededed;
+    --cancel-border: #333333;
+
+    --error-color: #ff6b6b;
+
+    --card-bg: #141414;
+    --card-shadow: rgba(0, 0, 0, 0.4);
+    --border-color: #262626;
+
+    --tag-color: #c3c4ff;
+    --tag-bg: rgba(165, 166, 246, 0.12);
+    --tag-border: rgba(165, 166, 246, 0.3);
+
+
+  }
+}
+
+
+
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}

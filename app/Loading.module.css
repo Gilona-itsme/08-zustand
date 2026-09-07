@@ -1,0 +1,15 @@
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 24px;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--text-secondary)
+}
