@@ -15,51 +15,57 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+    --foreground: #ededed;
+
     --text-secondary: #a3a3a3;
     --text-hover: #ffffff;
+
     --title-color: #ffffff;
     --subtitle-color: #cccccc;
 
     --header-bg: #121212;
     --footer-bg: #0f0f0f;
+
     --border-color: #262626;
 
-    --danger: #e5484d;
-    --danger-hover: #c9302c;
-    --accent: #a5a6f6;
-    --accent-hover: #c3c4ff;
+    /* Primary */
+    --accent: #3E49A8;
+    --accent-hover: #a5b4fc;
+
+    /* Danger */
+    --danger: #AE1919;
+    --danger-hover: #f87171;
+
+    /* Inputs */
     --input-bg: #1c1c1c;
     --input-border: #333333;
     --input-text: #ededed;
 
+    /* Disabled */
     --disabled-bg: #3a3a3a;
 
+    /* Secondary buttons */
     --cancel-bg: #1e1e1e;
     --cancel-bg-hover: #2a2a2a;
     --cancel-text: #ededed;
     --cancel-border: #333333;
 
+    /* States */
     --error-color: #ff6b6b;
 
+    /* Cards */
     --card-bg: #141414;
     --card-shadow: rgba(0, 0, 0, 0.4);
-    --border-color: #262626;
 
-    --tag-color: #c3c4ff;
-    --tag-bg: rgba(165, 166, 246, 0.12);
-    --tag-border: rgba(165, 166, 246, 0.3);
-
-
+    /* Tags */
+    --tag-color: #c7d2fe;
+    --tag-bg: rgba(129, 140, 248, 0.15);
+    --tag-border: rgba(129, 140, 248, 0.35);
   }
 }
 
-
-
-
 body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Helvetica Neue", sans-serif;
+  font-family: var(--font-manrope), system-ui, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

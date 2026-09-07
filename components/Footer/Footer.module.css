@@ -7,6 +7,7 @@
   border-top: 1px solid var(--border-color);
 }
 
+
 .content {
   display: flex;
   flex-direction: column;
@@ -22,11 +23,13 @@
 }
 
 .footer a {
-  color: var(--accent);
+  color: var(--accent-hover);
   font-weight: 600;
   text-decoration: none;
 }
 
+
 .footer a:hover {
   text-decoration: underline;
+  color: var(--accent);
 }

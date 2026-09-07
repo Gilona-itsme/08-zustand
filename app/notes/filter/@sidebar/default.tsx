@@ -11,6 +11,11 @@ export default function SidebarNotes() {
 
   return (
     <ul className={css.menuList}>
+      <li className={css.menuItemCreate}>
+          <Link href="/notes/action/create" className={css.menuLink}>
+            + Create note
+          </Link>
+        </li>
       <li  className={css.menuItem}>
             <Link
               href="/notes/filter/all"

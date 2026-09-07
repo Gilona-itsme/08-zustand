@@ -68,20 +68,16 @@ const NotesClient = ({tag}: {tag: string}) => {
             onPageChange={setPage}
           />
         )}
-        <button type="button" className={css.button} onClick={handleOpenModal}>
+        {/* <button type="button" className={css.button} onClick={handleOpenModal}>
           Create note +
-        </button>
+        </button> */}
       </div>
 
       {isLoading && <Loader />}
       {isError && <ErrorMessage message={errorMessage} />}
       {data && data.notes.length > 0 && <NoteList notes={data.notes} />}
 
-      {isModalOpen && (
-        <Modal onClose={handleCloseModal}>
-          <NoteForm onCancel={handleCloseModal} />
-        </Modal>
-      )}
+      
     </div>
   );
 }
