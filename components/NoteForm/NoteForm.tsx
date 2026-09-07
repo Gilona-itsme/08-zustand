@@ -14,7 +14,10 @@ export default function NoteForm() {
   const { draft, setDraft, clearDraft } = useNoteDraftStore();
   const [isHydrated, setIsHydrated] = useState(false);
 
-   useEffect(() => {
+  useEffect(() => {
+    if (useNoteDraftStore.persist.hasHydrated()) {
+      setIsHydrated(true);
+    }
     const unsubscribe = useNoteDraftStore.persist.onFinishHydration(() => {
       setIsHydrated(true);
     });
