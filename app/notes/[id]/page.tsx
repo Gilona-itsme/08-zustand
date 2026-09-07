@@ -5,6 +5,53 @@ import {
 } from "@tanstack/react-query";
 import NoteDetailsClient from "./NoteDetails.client";
 import { fetchNoteById } from "@/lib/api";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  try {
+    const note = await fetchNoteById(id);
+
+    const title = `${note.title} | NoteHub`;
+    const description = note.content.slice(0, 60);
+
+    return {
+      title,
+      description,
+      openGraph: {
+        title,
+        description,
+        url: `https://notehub.com/notes/${id}`,
+        images: [
+          {
+            url: "/og-image.jpg",
+            width: 1200,
+            height: 630,
+            alt: "NoteHub",
+          },
+        ],
+      },
+    };
+  } catch {
+    return {
+      title: "Note not found | NoteHub",
+      description: "The requested note could not be found",
+      openGraph: {
+        title: "Note not found | NoteHub",
+        description: "The requested note could not be found",
+        url: `https://notehub.com/notes/${id}`,
+        images: [
+          {
+            url: "/og-image.jpg",
+            width: 1200,
+            height: 630,
+            alt: "NoteHub",
+          },
+        ],
+      },
+    };
+  }
+}
 
 type Props = {
   params: Promise<{ id: string }>;
